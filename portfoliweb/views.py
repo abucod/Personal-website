@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import About, Comment, ClientLogo, Education, Experince, Portfolio, Skills, Category
+from .models import About, Comment, ClientLogo, Education, Experince, Portfolio, Skills, Category, Service
 
 def about(request):
     about = About.objects.all()
@@ -10,6 +10,7 @@ def about(request):
     skills = Skills.objects.all()
     categorys = Category.objects.all()
     projects = Portfolio.objects.all()
+    service = Service.objects.all()
     return render(request, 'portfoliweb/index.html', {
         "about": about,
         "comments": comments,
@@ -19,6 +20,7 @@ def about(request):
         "skills": skills,
         "categorys": categorys,
         "projects": projects,
+        "service": service,
  },)
 
 # def comment(request):

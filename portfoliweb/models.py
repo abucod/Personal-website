@@ -64,9 +64,11 @@ class Skills(models.Model):
     def __str__(self):
         return f"{self.name} daraja {self.lavel}"
 
-class SocialMedia(models.Model):
-    url = models.CharField(max_length=250)
-    icon = models.CharField(max_length=250)
+
+class Service(models.Model):
+    name = models.CharField(max_length=250)
+    picture = models.FileField(upload_to="./images")
+    text = models.TextField()
 
     def __str__(self):
-        return f"{self.url} {self.url}"
+        return f"{self.name} {self.text}"
