@@ -28,18 +28,6 @@ from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
 import telegram
 
-@csrf_exempt
-def send_telegram_message(request):
-    if request.method == 'POST':
-        # Process the form data here...
-        name = request.POST.get('name')
-        email = request.POST.get('email')
-        message = request.POST.get('message')
-        # Then send a message to Telegram
-        bot = telegram.Bot(token='5962755012:AAHMvrF3i9QdYvxCcac6asDPlA3SkX8Xj_8')
-        bot.send_message(chat_id='1816256414', text=f'New contact form submission from {name} ({email}): {message}')
-        return JsonResponse({'success': True})
-    return JsonResponse({'success': False})
 
 # def comment(request):
 #     comments = Comment.objects.all()
