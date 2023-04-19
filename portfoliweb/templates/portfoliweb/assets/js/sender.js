@@ -1,7 +1,7 @@
-function submitForm() {
+function sender() {
     var name = document.getElementById('name').value;
     var email = document.getElementById('email').value;
-    var message = document.getElementById('message').value;
+    var message = document.getElementsByName('message')[0].value;
     var csrf_token = document.getElementsByName('csrfmiddlewaretoken')[0].value;
 
     var xhr = new XMLHttpRequest();
@@ -16,4 +16,6 @@ function submitForm() {
         }
     };
     xhr.send(encodeURI('name=' + name + '&email=' + email + '&message=' + message));
+
+    return false;
 }

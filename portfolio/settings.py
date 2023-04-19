@@ -113,7 +113,7 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'portfoliweb/templates/portfoliweb/assets/images')
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 STATICFILES_DIRS = [
     '/home/linux/Documents/Coding/DjangoPro/portfolio/portfoliweb/templates/portfoliweb/assets',
