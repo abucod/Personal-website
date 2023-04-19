@@ -22,15 +22,3 @@ def about(request):
         "projects": projects,
         "service": service,
  },)
-
-from django.shortcuts import render
-from django.views.decorators.csrf import csrf_exempt
-from django.http import JsonResponse
-import telegram
-
-
-# def comment(request):
-#     comments = Comment.objects.all()
-#     return render(request, 'portfoliweb/index.html', {
-#         "comments": comments,
-#     },)
