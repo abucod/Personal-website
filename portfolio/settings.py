@@ -13,7 +13,7 @@ SECRET_KEY = 'django-insecure-f8&wd3z^ml%diwjavp1f_gvl5cbtct*3exwz*%_)8uz-rp7h62
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -116,8 +116,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'portfoliweb/templates/portfoliweb/assets/im
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 STATICFILES_DIRS = [
-    '/home/linux/Documents/Coding/DjangoPro/portfolio/portfoliweb/templates/portfoliweb/assets',
+    os.path.join(BASE_DIR, 'portfoliweb/templates/portfoliweb/assets'),
 ]
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
