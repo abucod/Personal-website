@@ -1,6 +1,6 @@
 
 ```git
-git clone https://github.com/AbduazimDev/Personal-website.git
+https://github.com/AbduazimDev/Personal-website.git
 ```
 ```command
 cd Personal-website
